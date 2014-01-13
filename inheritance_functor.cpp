@@ -58,7 +58,7 @@ class Assign : public Functor<OP, OutIt>
     public:
     Assign( OP & o ) : Functor<OP, OutIt>(o) {}
 
-    int operator() ( int& value, OutIt out )
+    virtual int operator() ( int& value, OutIt out )
     {
         // std::clog << value << " + " << this->op.arg << std::endl;
         return this->op(value,out);
